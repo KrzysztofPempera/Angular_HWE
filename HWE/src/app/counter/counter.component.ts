@@ -7,8 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CounterComponent {
   public currentCount = 0;
+  public tempVarA = 0;
+  public tempVarB = 1;
 
   public incrementCounter() {
-    this.currentCount++;
+    this.tempVarA = this.currentCount + this.tempVarB;
+    this.tempVarB = this.currentCount;
+    this.currentCount = this.tempVarA;
   }
 }
