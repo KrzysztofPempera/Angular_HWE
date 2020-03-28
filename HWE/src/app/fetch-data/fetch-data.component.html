@@ -7,18 +7,23 @@
 <table class='table table-striped' *ngIf="forecasts">
   <thead>
     <tr>
-      <th>Date</th>
+      <th>City</th>
       <th>Temp. (C)</th>
       <th>Temp. (F)</th>
+      <th>Humidity (%)</th>
+      <th>Wind (km/s)</th>
       <th>Summary</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let forecast of forecasts">
-      <td>{{ forecast.dateFormatted }}</td>
-      <td>{{ forecast.temperatureC }}</td>
-      <td>{{ forecast.temperatureF }}</td>
-      <td>{{ forecast.summary }}</td>
+    <tr>
+      <td>{{ forecasts.name }}</td>
+      <td>{{ calcFtoC(forecasts.main.temp) }}</td>
+      <td>{{ forecasts.main.temp.toFixed(1) }}</td>
+      <td>{{ forecasts.main.humidity }}</td>
+      <td>{{ forecasts.wind.speed.toFixed(1) }}</td>
+      <td>{{ forecasts.weather[0].description }}</td>
     </tr>
   </tbody>
 </table>
+
