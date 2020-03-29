@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
 import { CarouselModule } from 'ngx-bootstrap/carousel';
-import { TooltipModule } from 'ngx-bootstrap/tooltip';
 
 import { BASE_URL } from 'src/shared/service';
 
@@ -26,8 +25,7 @@ import { CounterComponent } from './counter/counter.component';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    CarouselModule.forRoot(),
-    TooltipModule.forRoot()
+    CarouselModule.forRoot()
   ],
   providers: [{provide: 'BASE_URL',
     useValue: 'https://api.openweathermap.org/data/2.5/weather?q=' }],

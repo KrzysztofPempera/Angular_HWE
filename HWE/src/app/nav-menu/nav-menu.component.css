@@ -16,3 +16,6 @@ html {
 .box-shadow {
   box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
+.nav-item:hover {
+  text-shadow: 0 0 11px rgba(33,33,33,.2);
+}
